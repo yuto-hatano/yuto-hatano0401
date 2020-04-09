@@ -8,8 +8,7 @@
       <h1>Seattle consulting</h1>
     </div>
 
-    <img id="profilePicture" src="@/assets/introduce.png" alt="紹介画像"  style = "text-align:center"/>
-
+    <img id="profilePicture" src="@/assets/introduce.png" alt="紹介画像" />
   </div>
 </template>
 

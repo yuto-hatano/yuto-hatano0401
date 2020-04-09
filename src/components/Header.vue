@@ -3,6 +3,7 @@
     <button id="button" @click="toggle" class="btn btn-success">
       <img id="humburger" src="@/assets/humburger.png" alt="メニュー"/>
     </button>
+    
     <Drawer @close="toggle" align="left" :closeable="true">
       <div v-if="open">content here</div>
     </Drawer>
