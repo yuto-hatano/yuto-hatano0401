@@ -1,8 +1,9 @@
-<template>
-  <div id ="Header">
-    <button id ="button" @click="toggle" class="btn btn-success">
-      <img src="@/assets/humburger.png" alt="メニュー"  height="47%" width="47%"/>
+<template lang="html">
+  <div id="Header">
+    <button id="button" @click="toggle" class="btn btn-success">
+      <img id="humburger" src="@/assets/humburger.png" alt="メニュー"/>
     </button>
+    
     <Drawer @close="toggle" align="left" :closeable="true">
       <div v-if="open">content here</div>
     </Drawer>
@@ -32,22 +33,27 @@ export default {
 </script>
 
 <style scoped>
-Header{
+#Header{
   background-color: #F3F3F3;
   width: 100%;
   height:auto
 }
 
-button{
+#button{
   width: 60px;
   height: 50px;
   box-shadow: none;
   border-style: none;
 
-   /*透過の設定*/
-  opacity: 0.4;
-   background-color: #F3F3F3;
-   background-size: cover;
+  /*透過の設定*/
+  opacity: 0.3;
+  background-color: #F3F3F3;
+  background-size: cover;
 }
 
+#humburger{
+  height:47%;
+  width:47%;
+}
 </style>
+

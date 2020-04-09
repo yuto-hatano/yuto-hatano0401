@@ -31,4 +31,6 @@ export default {
 }
 </script>
 
-
+<style scoped>
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+</style>
