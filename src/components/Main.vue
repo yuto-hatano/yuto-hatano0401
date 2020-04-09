@@ -52,7 +52,6 @@ export default {
 }
 
 .Name{
-  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
   font-family: 'Noto Sans JP', sans-serif;
   font-style:Bold;
   font-size: 18pt ;
