@@ -43,6 +43,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+font-family: 'Noto Sans JP', sans-serif;
 </style>

@@ -13,12 +13,17 @@
     </button>
     
     <Drawer
+      id="drawerSection"
       align="left"
       :closeable="true"
       @close="toggle"
     >
       <div v-if="open">
-        content here
+        <span @click="innerOpen=true">
+          <ul id="drawerMenuSection">
+            <li>sample</li>
+          </ul>
+        </span>
       </div>
     </Drawer>
   </div>
@@ -46,6 +51,15 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import "~bootstrap/scss/bootstrap-reboot",
+  "~bootstrap/scss/buttons";
+
+$--simple-drawer-bg-color:#f3f3f3;
+
+@import "~vue-simple-drawer/src/index";
+</style>
+
 <style scoped>
 #Header {
   background-color: #f3f3f3;
@@ -69,5 +83,13 @@ export default {
   height: 47%;
   width: 47%;
 }
+
+#drawerMenuSection {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  border: 2px solid;
+}
+
 </style>
 
