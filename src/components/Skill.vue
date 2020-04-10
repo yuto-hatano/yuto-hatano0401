@@ -1,8 +1,8 @@
 <template>
   <div id="skillSection">
-    <div id="skillTitle">
-      <h1>Skill Set</h1>
-    </div>
+    <h1 id="skillTitle">
+      Skill set
+    </h1>
 
     <div id="skillExplain">
       <p>sample</p>
@@ -33,7 +33,6 @@ export default {
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 20px;
 }
 
 #skillTitle {
@@ -42,8 +41,8 @@ export default {
   font-size: 18pt;
   color: #20879f;
   text-shadow: 2px 3px 4px #808080;
-  text-align: center;
   padding: 5px;
+  text-align: center;
 }
 
 #skillExplain {

@@ -27,10 +27,22 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Header'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 </style>
