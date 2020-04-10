@@ -8,7 +8,6 @@
       <p>sample</p>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -18,28 +17,28 @@ export default {
 </script>
 
 <style scoped>
-#visionSection{
-background: radial-gradient(#F5F5F5);
-width:100%;
-height:auto;
-text-align: center;
+#visionSection {
+  background: radial-gradient(#f5f5f5);
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-#visionTitle{
+#visionTitle {
   font-family: 'Noto Sans JP', sans-serif;
-  font-style:Bold;
-  font-size: 18pt ;
-  color:#20879F;
+  font-style: bold;
+  font-size: 18pt;
+  color: #20879f;
   text-shadow: 2px 3px 4px #808080;
-  padding:10px;
+  padding: 10px;
 }
 
-#visionExplain{
+#visionExplain {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt ;
-  color:#707070;
+  font-size: 12pt;
+  color: #707070;
   word-break: keep-all;
-  line-height:0.25em;
+  line-height: 0.25em;
   padding: 20px;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div id="skillSection">
-    <div id="skillTitle">
-      <h1>Skill Set</h1>
-    </div>
+    <h1 id="skillTitle">
+      Skill set
+    </h1>
 
-    <div id=skillExplain>
+    <div id="skillExplain">
       <p>sample</p>
     </div>
 
@@ -12,10 +12,12 @@
       <p>label</p>
     </div>
 
-    <a href="https://github.com/yuto-hatano" id="gitHubLink"> 
+    <a
+      id="gitHubLink"
+      href="https://github.com/yuto-hatano"
+    > 
       GitHub:https://github.com/yuto-hatano
     </a>
-
   </div>
 </template>
 
@@ -26,47 +28,42 @@ export default {
 </script>
 
 <style scoped>
-#skillSection{
-  background-color:#FFFFFF;
-  width:100%;
-  height:auto;
-  text-align:center;
-  padding:20px;
+#skillSection {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-#skillTitle{
-  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+#skillTitle {
   font-family: 'Noto Sans JP', sans-serif;
-  font-style:Bold;
-  font-size: 18pt ;
-  color:#20879F;
+  font-style: bold;
+  font-size: 18pt;
+  color: #20879f;
   text-shadow: 2px 3px 4px #808080;
-  text-align:center;
-  padding:5px;
+  padding: 5px;
+  text-align: center;
 }
 
-#skillExplain{
-  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+#skillExplain {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt ;
-  color:#707070;
+  font-size: 12pt;
+  color: #707070;
   word-break: keep-all;
-  line-height:0.25em;
+  line-height: 0.25em;
   padding: 20px;
 }
 
-#gitHubLabel{
-  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+#gitHubLabel {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt ;
-  color:#20879F;
+  font-size: 12pt;
+  color: #20879f;
 }
 
-#gitHubLink{
-  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+#gitHubLink {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt ;
-  color:#20879F;
+  font-size: 12pt;
+  color: #20879f;
   padding: 20px;
 }
 </style>

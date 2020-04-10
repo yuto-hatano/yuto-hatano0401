@@ -19,7 +19,7 @@ import Footer from './components/Footer.vue'
 
 
 export default {
-  name: 'ポートフォリオ',
+  name: '',
   components: {
     Header,
     Main,
@@ -27,10 +27,24 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Header'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
   }
 }
 </script>
 
-<style scoped>
+<style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+font-family: 'Noto Sans JP', sans-serif;
 </style>
