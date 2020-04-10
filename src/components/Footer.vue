@@ -13,14 +13,13 @@ export default {
 </script>
 
 <style scoped>
-#footerSection{
-  background: -moz-linear-gradient(top, #80E1F7, #06C1E6);
-  background: -webkit-linear-gradient(top, #80E1F7, #06C1E6);
-  background: linear-gradient(to bottom, #80E1F7, #06C1E6);
-  }
+#footerSection {
+  background: -moz-linear-gradient(top, #80e1f7, #06c1e6);
+  background: -webkit-linear-gradient(top, #80e1f7, #06c1e6);
+  background: linear-gradient(to bottom, #80e1f7, #06c1e6);
+}
 
-#footerCopyright{
-  color:#ffffff;
-  
+#footerCopyright {
+  color: #fff;
 }
 </style>
