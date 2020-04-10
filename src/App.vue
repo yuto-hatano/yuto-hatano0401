@@ -19,7 +19,7 @@ import Footer from './components/Footer.vue'
 
 
 export default {
-  name: 'ポートフォリオ',
+  name: '',
   components: {
     Header,
     Main,
@@ -31,6 +31,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 </style>
