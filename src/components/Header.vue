@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="Header">
     <button
       id="button"
@@ -20,9 +20,7 @@
     >
       <div v-if="open">
         <span @click="innerOpen=true">
-          <ul id="drawerMenuSection">
-            <li>sample</li>
-          </ul>
+          <Menu />
         </span>
       </div>
     </Drawer>
@@ -31,12 +29,14 @@
 
 <script>
 import Drawer from "vue-simple-drawer";
+import Menu from "./Menu"
 
 
 export default {
   name: 'Header',
   components: {
-    Drawer
+    Drawer,
+    Menu
   },
   data() {
     return {
@@ -83,13 +83,5 @@ $--simple-drawer-bg-color:#f3f3f3;
   height: 47%;
   width: 47%;
 }
-
-#drawerMenuSection {
-  background-color: #fff;
-  width: 100%;
-  height: auto;
-  border: 2px solid;
-}
-
 </style>
 

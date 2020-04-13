@@ -21,6 +21,18 @@
 <script>
 export default {
   name: 'Footer',
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Header'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
+  }
 }
 </script>
 
