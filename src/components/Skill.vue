@@ -9,21 +9,30 @@
     </div>
 
     <div id="gitHubLabel">
-      <p>label</p>
-    </div>
+      <label for="gitHubLink">GitHub:</label>
+      <a
+        id="gitHubLink"
+        href="https://github.com/yuto-hatano"
+      > 
+        https://github.com/yuto-hatano
+      </a>
 
-    <a
-      id="gitHubLink"
-      href="https://github.com/yuto-hatano"
-    > 
-      GitHub:https://github.com/yuto-hatano
-    </a>
+      <div>
+        <h1>棒グラフと線グラフ</h1>
+        <chart />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Chart from './chart.vue';
+
 export default {
-  name: 'Skill'
+  name: 'Skill',
+  components: {
+    Chart,
+  },
 }
 </script>
 
@@ -64,7 +73,7 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
   color: #20879f;
-  padding: 20px;
+  padding: 20px 0;
 }
 </style>
 
