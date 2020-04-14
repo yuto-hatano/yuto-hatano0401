@@ -51,6 +51,7 @@ export default {
         null,
         'y'
       )
+      this.$emit('Menu-close')
     },
 
     About () {
@@ -62,6 +63,7 @@ export default {
         null,
         'y'
       )
+      this.$emit('Menu-close')
     },
 
     Skill () {
@@ -73,6 +75,7 @@ export default {
         null,
         'y'
       )
+      this.$emit('Menu-close')
     },
 
   Vision () {
@@ -84,6 +87,7 @@ export default {
         null,
         'y'
       )
+      this.$emit('Menu-close')
     }
   }
   }

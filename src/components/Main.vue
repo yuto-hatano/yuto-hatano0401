@@ -54,9 +54,8 @@ export default {
 }
 
 #profilePicture {
-  width: 64px;
-  height: 64px;
-  background-position: center;
+  width: 30%;
+  height: 30%;
   border-radius: 50%;
   padding: 10px;
 }
