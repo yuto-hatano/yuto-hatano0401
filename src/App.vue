@@ -1,5 +1,5 @@
 <template>
-  <div id="ポートフォリオ">
+  <div id="App">
     <Header />
     <Main />
     <About />
@@ -33,4 +33,8 @@ export default {
 
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+#App {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 </style>

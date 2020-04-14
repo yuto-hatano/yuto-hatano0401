@@ -45,7 +45,6 @@ export default {
 }
 
 #footerCopyright {
-  font-family: 'Noto Sans JP', sans-serif;
   font-style: bold;
   font-size: 12pt;
   color: #fff;

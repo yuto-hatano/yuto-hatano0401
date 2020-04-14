@@ -20,7 +20,7 @@
     >
       <div v-if="open">
         <span @click="innerOpen=true">
-          <Menu />
+          <Menu @Menu-close="toggle" />
         </span>
       </div>
     </Drawer>
