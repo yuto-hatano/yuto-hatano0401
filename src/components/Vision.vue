@@ -25,6 +25,8 @@ export default {
   background: radial-gradient(#f5f5f5);
   width: 100%;
   height: auto;
+  margin-top: -60px;
+  padding-top: 60px;
   text-align: center;
 }
 

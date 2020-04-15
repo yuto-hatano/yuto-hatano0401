@@ -13,7 +13,6 @@
     </button>
     
     <Drawer
-      id="drawerSection"
       align="left"
       :closeable="true"
       @close="toggle"
@@ -65,11 +64,14 @@ $--simple-drawer-bg-color:#f3f3f3;
   background-color: #f3f3f3;
   width: 100%;
   height: auto;
+  height: 60px;
+  position: fixed;
+  top: 0;
 }
 
 #button {
-  width: 60px;
-  height: 50px;
+  width: 80px;
+  height: 60px;
   box-shadow: none;
   border-style: none;
 

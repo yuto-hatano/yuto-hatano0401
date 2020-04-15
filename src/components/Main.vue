@@ -33,6 +33,12 @@ export default {
 #mainSection {
   width: 100%;
   height: auto;
+  padding-top: 50px;
+  margin-bottom: 60px;
+  padding-bottom: -60px;
+  min-height: 200px;
+  border-bottom: solid 1px #cbcbcb;
+
 
   /* グラデーション */
   background: -moz-linear-gradient(top, #80e1f7, #06c1e6);

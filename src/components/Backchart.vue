@@ -2,7 +2,7 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'Backchart',
   extends: Radar,
   data () {
     return {
@@ -10,12 +10,15 @@ export default {
         labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
         datasets: [
           {
-            label: 'Frontend',
+            label: 'Back-end',
             data: [10, 20, 30, 40],
             backgroundColor: [
               'rgba(15, 136, 57,0.25)'
             ],
             borderColor: [
+              'rgba(15, 136, 57,0.75)',
+              'rgba(15, 136, 57,0.75)',
+              'rgba(15, 136, 57,0.75)',
               'rgba(15, 136, 57,0.75)'
             ],
             borderWidth: 1
