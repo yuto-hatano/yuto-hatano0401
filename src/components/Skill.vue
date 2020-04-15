@@ -269,7 +269,6 @@ button {
   border: 1px;
 }
 
-
 #Frontend {
   color: #b51a1a;
 }
