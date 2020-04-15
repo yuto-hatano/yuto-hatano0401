@@ -56,6 +56,7 @@ export default {
 #profilePicture {
   width: 30%;
   height: 30%;
+  background-position: center;
   border-radius: 50%;
   padding: 10px;
 }
