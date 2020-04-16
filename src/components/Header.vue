@@ -56,10 +56,6 @@ export default {
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
   "~bootstrap/scss/buttons";
-
-$--simple-drawer-bg-color:#f3f3f3;
-
-@import "~vue-simple-drawer/src/index";
 </style>
 
 <style scoped>
