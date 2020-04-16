@@ -87,3 +87,10 @@ export default {
 
 </style>
 
+<style>
+.vue-simple-drawer {
+  padding: 60px 0 0 !important;
+  background-color: #f3f3f3 !important;
+}
+</style>
+

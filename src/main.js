@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import './assets/css/reset.css'
 import smoothScroll from 'vue-smoothscroll'
-import "./demo.scss";
 
 Vue.config.productionTip = false
 
