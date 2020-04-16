@@ -89,8 +89,5 @@ $--simple-drawer-bg-color:#f3f3f3;
   width: 47%;
 }
 
-#menuContents {
-  padding: 60px none;
-}
 </style>
 

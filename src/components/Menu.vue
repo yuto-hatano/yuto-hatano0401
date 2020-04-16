@@ -115,6 +115,7 @@ li {
   background-color: #fff;
   width: 100%;
   height: 50px;
+  border: 1px;
 }
 
 .drawerMenuItemLink {

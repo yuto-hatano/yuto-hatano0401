@@ -37,6 +37,9 @@ export default {
               suggestedMin: 0,
                 stepSize: 10,
           }
+        },
+        legend:{
+          display: false,
         }
       }
     }
