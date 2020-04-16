@@ -26,137 +26,194 @@
     </div>
 
     <div id="skillCategories">
-      <a id="Frontend">
-        Front end
-      </a>
+      <button 
+        id="Frontend"
+        type="button"
+        :class="{'frontChange':isFrontActive}"
+        @click="setCurrentChart('Frontend')"
+      >
+        Front-end
+      </button>
 
-      <a id="Backend">
-        Back end
-      </a>
+      <button
+        id="Backend"
+        type="button"
+        :class="{'backChange':isBackActive}"
+        @click="setCurrentChart('Backend')"
+      >
+        Back-end
+      </button>
 
-      <a id="Div-ops">
-        Div-ops
-      </a>
+      <button
+        id="Devops"
+        type="button"
+        :class="{'devChange':isDevOpsActive}"
+        @click="setCurrentChart('Devops')"
+      >
+        Dev-ops
+      </button>
     </div>
 
     <div class="skillList">
-      <button
+      <label
         class="FrontSkill"
-        type="button"
+        :class="{'frontChange':isFrontActive}"
       >
-        <span>HTML</span>
-      </button>
+        HTML
+      </label>
 
-      <button
+      <label
         class="FrontSkill"
-        type="button"
+        :class="{'frontChange':isFrontActive}"
       >
-        <span>CSS</span>
-      </button>
+        CSS
+      </label>
 
-      <button
+      <label
         class="FrontSkill"
-        type="button"
+        :class="{'frontChange':isFrontActive}"
       >
-        <span>Javascript</span>
-      </button>
+        Javascript
+      </label>
 
-      <button
+      <label
         class="FrontSkill"
-        type="button"
+        :class="{'frontChange':isFrontActive}"
       >
-        <span>SCSS</span>
-      </button>
+        SCSS
+      </label>
       
-      <button
+      <label
         class="FrontSkill"
-        type="button"
+        :class="{'frontChange':isFrontActive}"
       >
-        <span>Vue</span>
-      </button>
+        Vue
+      </label>
     </div>
 
     <div class="skillList">
-      <button
+      <label
         class="BackSkill"
-        type="button"
+        :class="{'backChange':isBackActive}"
       >
-        <span>Java</span>
-      </button>
+        Java
+      </label>
 
-      <button
+      <label
         class="BackSkill"
-        type="button"
+        :class="{'backChange':isBackActive}"
       >
-        <span>Ruby</span>
-      </button>
+        Ruby
+      </label>
 
-      <button
+      <label
         class="BackSkill"
-        type="button"
+        :class="{'backChange':isBackActive}"
       >
-        <span>RubyOnRails</span>
-      </button>
+        RubyOnRails
+      </label>
 
-      <button
+      <label
         class="BackSkill"
-        type="button"
+        :class="{'backChange':isBackActive}"
       >
-        <span>MySQL</span>
-      </button>
+        MySQL
+      </label>
     </div>
 
     <div class="skillList">
-      <button
+      <label
         class="DevSkill"
-        type="button"
+        :class="{'devChange':isDevOpsActive}"
       >
-        <span>Linux</span>
-      </button>
+        Linux
+      </label>
 
-      <button
+      <label
         class="DevSkill"
-        type="button"
+        :class="{'devChange':isDevOpsActive}"
       >
-        <span>Node</span>
-      </button>
+        Node
+      </label>
 
-      <button
+      <label
         class="DevSkill"
-        type="button"
+        :class="{'devChange':isDevOpsActive}"
       >
-        <span>Git</span>
-      </button>
+        Git
+      </label>
 
-      <button
+      <label
         class="DevSkill"
-        type="button"
+        :class="{'devChange':isDevOpsActive}"
       >
-        <span>GitHub</span>
-      </button>
+        GitHub
+      </label>
 
-      <button
+      <label
         class="DevSkill"
-        type="button"
+        :class="{'devChange':isDevOpsActive}"
       >
-        <span>Firebase</span>
-      </button>
+        Firebase
+      </label>
     </div>
 
-    <div id="skillGraph">
-      <chart />
+    <div 
+      v-if="isFrontActive"
+      class="skillGraph"
+    >
+      <Frontchart />
+    </div>
+
+    <div
+      v-if="isBackActive"
+      class="skillGraph"
+    >
+      <Backchart />
+    </div>
+
+    <div
+      v-if="isDevOpsActive"
+      class="skillGraph"
+    >
+      <Devchart />
     </div>
   </div>
 </template>
 
 <script>
-import Chart from './Frontchart.vue';
+import Frontchart from './Frontchart.vue';
+import Backchart from './Backchart.vue'
+import Devchart from './Devchart.vue'
 
 export default {
   name: 'Skill',
   components: {
-    Chart,
+    Frontchart,
+    Backchart,
+    Devchart,
   },
+  data(){
+    return{
+      currentChart:'Frontend'
+    }
+  },
+  computed:{
+    isFrontActive(){
+      return this.currentChart=='Frontend';
+    },
+    isBackActive(){
+      return this.currentChart=='Backend';
+    },
+    isDevOpsActive(){
+      return this.currentChart=='Devops';
+    },
+  },
+  methods:{
+    setCurrentChart(chart){
+      this.currentChart = chart;
+    }
+  }
 }
 </script>
 
@@ -165,6 +222,9 @@ export default {
   background-color: #fff;
   width: 100%;
   height: auto;
+  margin-top: -60px;
+  padding-top: 55px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -202,19 +262,23 @@ export default {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+  margin: 0 20px;
+  padding: 10px;
+  border: 1px;
+}
+
 #Frontend {
   color: #b51a1a;
-  padding: 10px;
 }
 
 #Backend {
   color: #0f8839;
-  padding: 10px;
 }
 
-#Div-ops {
+#Devops {
   color: #571083;
-  padding: 10px;
 }
 
 .skillList {
@@ -226,25 +290,53 @@ export default {
   color: #b51a1a;
   box-shadow: 2px 2px 4px gray;
   margin: 10px;
+  padding: 3px 5px;
+}
+
+.frontChange {
+  color: #b51a1a;
+  box-shadow: 2px 2px 4px gray;
+  margin: 10px;
+  padding: 7px 9px;
+  background-color: rgba(181, 26, 26, 0.25);
+  border-style: none;
 }
 
 .BackSkill {
   color: #0f8839;
   box-shadow: 2px 2px 4px gray;
   margin: 10px;
+  padding: 3px 5px;
+}
+
+.backChange {
+  color: #0f8839;
+  box-shadow: 2px 2px 4px gray;
+  margin: 10px;
+  padding: 7px 9px;
+  background-color: rgba(15, 136, 57, 0.25);
 }
 
 .DevSkill {
   color: #571083;
   box-shadow: 2px 2px 4px gray;
   margin: 10px;
+  padding: 3px 5px;
 }
 
-#skillGraph {
+.devChange {
+  color: #571083;
+  box-shadow: 2px 2px 4px gray;
+  margin: 10px;
+  padding: 7px 9px;
+  background-color: rgba(87, 16, 131, 0.25);
+}
+
+.skillGraph {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 75%;
   padding: 20px;
 }
 </style>

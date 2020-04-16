@@ -45,9 +45,9 @@ export default {
     Top () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#Header'),
+        document.querySelector('#mainSection'),
         400,
-        null,
+        window.scrollBy(0,-30),
         null,
         'y'
       )

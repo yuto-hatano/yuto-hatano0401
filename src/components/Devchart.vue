@@ -2,7 +2,7 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'Devchart',
   extends: Radar,
   data () {
     return {
@@ -16,7 +16,11 @@ export default {
               'rgba(87, 16, 131,0.25)'
             ],
             borderColor: [
-              'rgba(87, 16, 131,0.75)'
+              'rgba(87, 16, 131,0.75)',
+              'rgba(87, 16, 131,0.75)',
+              'rgba(87, 16, 131,0.75)',
+              'rgba(87, 16, 131,0.75)',
+              'rgba(87, 16, 131,0.75)',
             ],
             borderWidth: 1
           },
