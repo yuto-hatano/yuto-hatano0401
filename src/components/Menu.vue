@@ -99,6 +99,7 @@ export default {
   background-color: #f3f3f3;
   width: 100%;
   height: auto;
+  margin: 60px none;
 }
 
 #drawerMenuSection {

@@ -17,7 +17,10 @@
       :closeable="true"
       @close="toggle"
     >
-      <div v-if="open">
+      <div
+        v-if="open"
+        id="menuContents"
+      >
         <span @click="innerOpen=true">
           <Menu @Menu-close="toggle" />
         </span>
@@ -84,6 +87,10 @@ $--simple-drawer-bg-color:#f3f3f3;
 #humburger {
   height: 47%;
   width: 47%;
+}
+
+#menuContents {
+  padding: 60px none;
 }
 </style>
 
