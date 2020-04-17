@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="Header">
     <button
       id="button"
@@ -13,16 +13,16 @@
     </button>
     
     <Drawer
-      id="drawerSection"
       align="left"
       :closeable="true"
       @close="toggle"
     >
-      <div v-if="open">
+      <div
+        v-if="open"
+        id="menuContents"
+      >
         <span @click="innerOpen=true">
-          <ul id="drawerMenuSection">
-            <li>sample</li>
-          </ul>
+          <Menu @Menu-close="toggle" />
         </span>
       </div>
     </Drawer>
@@ -31,12 +31,14 @@
 
 <script>
 import Drawer from "vue-simple-drawer";
+import Menu from "./Menu"
 
 
 export default {
   name: 'Header',
   components: {
-    Drawer
+    Drawer,
+    Menu
   },
   data() {
     return {
@@ -54,10 +56,6 @@ export default {
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
   "~bootstrap/scss/buttons";
-
-$--simple-drawer-bg-color:#f3f3f3;
-
-@import "~vue-simple-drawer/src/index";
 </style>
 
 <style scoped>
@@ -65,11 +63,14 @@ $--simple-drawer-bg-color:#f3f3f3;
   background-color: #f3f3f3;
   width: 100%;
   height: auto;
+  height: 60px;
+  position: fixed;
+  top: 0;
 }
 
 #button {
-  width: 60px;
-  height: 50px;
+  width: 80px;
+  height: 60px;
   box-shadow: none;
   border-style: none;
 
@@ -84,12 +85,12 @@ $--simple-drawer-bg-color:#f3f3f3;
   width: 47%;
 }
 
-#drawerMenuSection {
-  background-color: #fff;
-  width: 100%;
-  height: auto;
-  border: 2px solid;
-}
+</style>
 
+<style>
+.vue-simple-drawer {
+  padding: 60px 0 0 !important;
+  background-color: #f3f3f3 !important;
+}
 </style>
 

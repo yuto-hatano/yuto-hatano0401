@@ -5,7 +5,11 @@
     </div>
 
     <div id="visionExplain">
-      <p>sample</p>
+      <p>
+        VR,ARといった拡張現実を用いて、
+        目に見えない世界を可視化するようなプロダクトを開発したいと考えています。
+        とはいえ、技術力のない身ですので今後とも専門性を高め研鑽を積んでいきます。
+      </p>
     </div>
   </div>
 </template>
@@ -21,11 +25,12 @@ export default {
   background: radial-gradient(#f5f5f5);
   width: 100%;
   height: auto;
+  margin-top: -60px;
+  padding-top: 60px;
   text-align: center;
 }
 
 #visionTitle {
-  font-family: 'Noto Sans JP', sans-serif;
   font-style: bold;
   font-size: 18pt;
   color: #20879f;
@@ -34,11 +39,11 @@ export default {
 }
 
 #visionExplain {
-  font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
   color: #707070;
-  word-break: keep-all;
-  line-height: 0.25em;
-  padding: 20px;
+  word-break: normal;
+  line-height: 1.25em;
+  padding: 20px 50px;
+  text-align: left;
 }
 </style>

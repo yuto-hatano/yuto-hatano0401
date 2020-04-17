@@ -1,5 +1,5 @@
 <template>
-  <div id="ポートフォリオ">
+  <div id="App">
     <Header />
     <Main />
     <About />
@@ -27,18 +27,6 @@ export default {
     Skill,
     Vision,
     Footer
-  },
-  methods: {
-    clickSmoothScroll () {
-      event.preventDefault()
-      this.$SmoothScroll(
-        document.querySelector('#Header'),
-        400,
-        null,
-        null,
-        'y'
-      )
-    }
   }
 }
 </script>
@@ -46,5 +34,7 @@ export default {
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
-font-family: 'Noto Sans JP', sans-serif;
+#App {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 </style>
