@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Dev-ops',
-            data: [10, 20, 30, 40, 50],
+            data: [30, 10, 40, 30, 20],
             backgroundColor: [
               'rgba(87, 16, 131,0.25)'
             ],
@@ -37,6 +37,9 @@ export default {
               suggestedMin: 0,
                 stepSize: 10,
           }
+        },
+        legend:{
+          display: false,
         }
       }
     }

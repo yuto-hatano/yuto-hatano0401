@@ -17,7 +17,10 @@
       :closeable="true"
       @close="toggle"
     >
-      <div v-if="open">
+      <div
+        v-if="open"
+        id="menuContents"
+      >
         <span @click="innerOpen=true">
           <Menu @Menu-close="toggle" />
         </span>
@@ -53,10 +56,6 @@ export default {
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
   "~bootstrap/scss/buttons";
-
-$--simple-drawer-bg-color:#f3f3f3;
-
-@import "~vue-simple-drawer/src/index";
 </style>
 
 <style scoped>
@@ -84,6 +83,14 @@ $--simple-drawer-bg-color:#f3f3f3;
 #humburger {
   height: 47%;
   width: 47%;
+}
+
+</style>
+
+<style>
+.vue-simple-drawer {
+  padding: 60px 0 0 !important;
+  background-color: #f3f3f3 !important;
 }
 </style>
 
