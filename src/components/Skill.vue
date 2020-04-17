@@ -337,7 +337,7 @@ button {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 67%;
   padding: 20px;
 }
 </style>
