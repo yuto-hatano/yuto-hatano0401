@@ -20,6 +20,7 @@
       <a
         id="gitHubLink"
         href="https://github.com/yuto-hatano"
+        target="_blank"
       > 
         https://github.com/yuto-hatano
       </a>
