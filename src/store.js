@@ -8,15 +8,21 @@ const store = new Vuex.Store({ //ここに実装を書く
         graphScore: []
     },
     mutations:{
-        increment(state,paylord){
-            state.graphScore=paylord
+        setGraphScore(state,paylord){
+            state.graphScore=paylord.graphScore
         }
     },
     getters:{
-        getGraphScore: state=>{
-            return state.increment.paylord
+        graphScore(state) {
+            return state.graphScore
+        }
+    },
+    actions:{
+        getSkills({commit},graphScore){
+        commit('setGraphScore',{graphScore})
         }
     }
-    })
+})
+
 
 export default store
