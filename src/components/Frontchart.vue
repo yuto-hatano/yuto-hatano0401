@@ -30,7 +30,7 @@ export default {
         scale:{
           scalelabel:{
             fontFamily:'Noto Sans JP',
-            fontSize:30,
+            fontSize:100,
             },
           ticks:{
             suggestedMax: 50,
