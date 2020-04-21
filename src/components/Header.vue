@@ -49,7 +49,7 @@ export default {
     toggle() {
       this.open = !this.open
     }
-  }
+  },
 };
 </script>
 
