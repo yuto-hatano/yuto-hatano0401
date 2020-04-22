@@ -214,7 +214,7 @@ export default {
     setCurrentChart(chart){
       this.currentChart = chart;
     }
-  }
+  },
 }
 </script>
 

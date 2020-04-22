@@ -1,5 +1,6 @@
 <script>
 import { Radar } from 'vue-chartjs';
+import score from 'vuex'
 
 export default {
   name: 'Frontchart',
@@ -11,7 +12,7 @@ export default {
         datasets: [
           {
             label: 'Frontend',
-            data: [30, 30, 20, 20, 20],
+            data: [{score}],
             backgroundColor: [
               'rgba(181, 26, 26,0.25)'
             ],
@@ -44,8 +45,16 @@ export default {
       },
     }
   },
+  computed: {
+    //main.jsでローカルにstoreを登録してるので、$storeが使える
+    //ここではgettersに登録したmessageゲッターを使ってstoreのstateのmessageを取得している
+    score(){
+     return this.$store.getters.graphScore
+  }},
+
   mounted () {
-    this.renderChart(this.data, this.options)
-  }
-}
+    this.renderChart(this.data, this.options),
+    this.$store.dispatch('getGraphScore')
+  },
+  } 
 </script>

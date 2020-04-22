@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
   // realtime databaseからスキルデータを取得する
   let skills = []
-  const query = admin.database().ref("skills").orderByKey();
+  const query = admin.database().ref("skillcategory").orderByKey();
   query.once("value").then(snapshot => {
     // 取得したデータを１件ずつ配列に設定する
     snapshot.forEach(childSnapshot => {
@@ -34,4 +34,4 @@ app.get('/', (req, res) => {
 });
 
 // regionを指定してファンクションを定義(CORS対策)
-exports.skills = functions.region('us-central1').https.onRequest(app);
+exports.skillcategory = functions.region('us-central1').https.onRequest(app);
