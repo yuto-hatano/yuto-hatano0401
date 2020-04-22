@@ -1,17 +1,19 @@
 <script>
 import { Radar } from 'vue-chartjs';
+import store from '../store'
 
 export default {
   name: 'Backchart',
+  store,
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
+        labels: [],
         datasets: [
           {
             label: 'Back-end',
-            data: [10, 20, 40, 20],
+            data: [],
             backgroundColor: [
               'rgba(15, 136, 57,0.25)'
             ],
@@ -43,8 +45,22 @@ export default {
       }
     }
   },
+  created(){    
+    this.getSkills()
+    this.getName()
+    },
   mounted () {
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills(){
+    const score = this.$store.getters.backGraphScore
+    this.data.datasets[0].data = score
+    },
+    getName(){
+    const name = this.$store.getters.backGraphName
+    this.data.labels= name
+    }
   }
 }
 </script>

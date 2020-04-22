@@ -4,19 +4,64 @@ import axios from "axios"
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({ //ここに実装を書く
+const store = new Vuex.Store({ 
     state:{
-        graphScore: []
+        graphScore: [],
+        loaded:false
     },
     getters:{
-        graphScore(state) {
-            return state.graphScore.score
+        frontGraphScore(state) {
+            const scoreAllay = []
+            state.graphScore[0].skills.forEach((skillInfo)=>{
+            scoreAllay.push(skillInfo.score)
+            })
+            return scoreAllay
+        },
+
+        frontGraphName(state) {
+            const scoreAllay = []
+            state.graphScore[0].skills.forEach((skillInfo)=>{
+            scoreAllay.push(skillInfo.name)
+            })
+            return scoreAllay
+        },
+
+        backGraphScore(state) {
+            const scoreAllay = []
+            state.graphScore[1].skills.forEach((skillInfo)=>{
+            scoreAllay.push(skillInfo.score)
+            })
+            return scoreAllay},
+        
+        backGraphName(state) {
+            const scoreAllay = []
+            state.graphScore[1].skills.forEach((skillInfo)=>{
+            scoreAllay.push(skillInfo.name)
+            })
+            return scoreAllay
+            },
+
+        devOpsGraphScore(state) {
+            const scoreAllay = []
+            state.graphScore[2].skills.forEach((skillInfo)=>{
+            scoreAllay.push(skillInfo.score)
+            })
+            return scoreAllay
+        },
+
+        devOpsGraphName(state) {
+            const scoreAllay = []
+            state.graphScore[2].skills.forEach((skillInfo)=>{
+                scoreAllay.push(skillInfo.name)
+            })
+            return scoreAllay
         }
     },
     mutations:{
         setGraphScore(state,paylord){
             state.graphScore=paylord.graphScore
-        }
+            state.loaded=true
+        },
     },
     actions:{
         async getGraphScore({commit}){
