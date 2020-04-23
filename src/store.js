@@ -66,7 +66,7 @@ const store = new Vuex.Store({
     actions:{
         async getGraphScore({commit}){
             const graphScore=[];
-            const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skillCategories';
+            const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skillcategory';
             const res = await axios.get(functionsUrl);
             res.data.forEach((score)=>{
                 graphScore.push(score);
