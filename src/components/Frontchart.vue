@@ -1,18 +1,19 @@
 <script>
 import { Radar } from 'vue-chartjs';
-import score from 'vuex'
+import store from '../store'
 
 export default {
   name: 'Frontchart',
+  store,
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Frontend',
-            data: [{score}],
+            data: [],
             backgroundColor: [
               'rgba(181, 26, 26,0.25)'
             ],
@@ -45,16 +46,23 @@ export default {
       },
     }
   },
-  computed: {
-    //main.jsでローカルにstoreを登録してるので、$storeが使える
-    //ここではgettersに登録したmessageゲッターを使ってstoreのstateのmessageを取得している
-    score(){
-     return this.$store.getters.graphScore
-  }},
-
-  mounted () {
-    this.renderChart(this.data, this.options),
-    this.$store.dispatch('getGraphScore')
+  created(){
+    this.getScores(),
+    this.getName()
   },
+  mounted () {
+    this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getScores(){
+    const score = this.$store.getters.frontGraphScore
+    this.data.datasets[0].data = score
+    },
+
+    getName(){
+    const name = this.$store.getters.frontGraphName
+    this.data.labels= name
+    }
+  }
   } 
 </script>
