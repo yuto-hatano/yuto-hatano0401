@@ -27,7 +27,7 @@ export default {
     Vision,
     Footer
   },
-  mounted(){
+  created(){
     this.$store.dispatch('getGraphScore')
   }
 }
