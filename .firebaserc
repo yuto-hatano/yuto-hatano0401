@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "yuto-hatano"
+  },
+  "targets": {
+    "yuto-hatano": {
+      "hosting": {
+        "portfolio": [
+          "yuto-hatano"
+        ]
+      }
+    },
+    "dev-yuto-hatano": {
+      "hosting": {
+        "portfolio": [
+          "dev-yuto-hatano"
+        ]
+      }
+    }
   }
 }
