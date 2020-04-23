@@ -20,6 +20,7 @@
       <a
         id="gitHubLink"
         href="https://github.com/yuto-hatano"
+        target="_blank"
       > 
         https://github.com/yuto-hatano
       </a>
@@ -159,7 +160,8 @@
     </div>
 
     <div 
-      v-if="isFrontActive"
+            
+      v-if="isFrontActive && loaded"
       class="skillGraph"
     >
       <Frontchart />
@@ -208,12 +210,15 @@ export default {
     isDevOpsActive(){
       return this.currentChart=='Devops';
     },
+    loaded(){
+      return this.$store.state.loaded
+    }
   },
   methods:{
     setCurrentChart(chart){
       this.currentChart = chart;
     }
-  }
+  },
 }
 </script>
 
@@ -336,7 +341,7 @@ button {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 67%;
   padding: 20px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="aboutSection">
     <div id="aboutTitle">
-      <h1>About Me!</h1>
+      <h1>About Me</h1>
     </div>
 
     <div id="aboutExplain">
@@ -19,7 +19,8 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  
 }
 </script>
 

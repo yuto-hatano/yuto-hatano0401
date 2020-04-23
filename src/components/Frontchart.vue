@@ -1,17 +1,19 @@
 <script>
 import { Radar } from 'vue-chartjs';
+import store from '../store'
 
 export default {
   name: 'Frontchart',
+  store,
   extends: Radar,
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Frontend',
-            data: [30, 30, 20, 20, 20],
+            data: [],
             backgroundColor: [
               'rgba(181, 26, 26,0.25)'
             ],
@@ -30,7 +32,7 @@ export default {
         scale:{
           scalelabel:{
             fontFamily:'Noto Sans JP',
-            fontSize:30,
+            fontSize:100,
             },
           ticks:{
             suggestedMax: 50,
@@ -44,8 +46,23 @@ export default {
       },
     }
   },
+  created(){
+    this.getScores(),
+    this.getName()
+  },
   mounted () {
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getScores(){
+    const score = this.$store.getters.frontGraphScore
+    this.data.datasets[0].data = score
+    },
+
+    getName(){
+    const name = this.$store.getters.frontGraphName
+    this.data.labels= name
+    }
   }
-}
+  } 
 </script>

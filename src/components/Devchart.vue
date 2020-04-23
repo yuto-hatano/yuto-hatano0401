@@ -1,17 +1,19 @@
 <script>
 import { Radar } from 'vue-chartjs';
+import store from '../store'
 
 export default {
   name: 'Devchart',
   extends: Radar,
+  store,
   data () {
     return {
       data: {
-        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
+        labels: [],
         datasets: [
           {
             label: 'Dev-ops',
-            data: [30, 10, 40, 30, 20],
+            data: [],
             backgroundColor: [
               'rgba(87, 16, 131,0.25)'
             ],
@@ -44,8 +46,23 @@ export default {
       }
     }
   },
+  created(){
+    this.getSkills()
+    this.getName()
+  },
+
   mounted () {
     this.renderChart(this.data, this.options)
-  }
+  },
+  
+  methods: {
+    getSkills(){
+    const score = this.$store.getters.devOpsGraphScore
+    this.data.datasets[0].data = score
+  },
+  getName(){
+    const name = this.$store.getters.devOpsGraphName
+    this.data.labels= name
+    }},
 }
 </script>
