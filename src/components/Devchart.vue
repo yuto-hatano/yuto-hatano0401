@@ -57,12 +57,12 @@ export default {
   
   methods: {
     getSkills(){
-    const score = this.$store.getters.devOpsGraphScore
+    const score = this.$store.getters.graphScore(this.$store.state.index['devOps'])
     this.data.datasets[0].data = score
-  },
-  getName(){
-    const name = this.$store.getters.devOpsGraphName
-    this.data.labels= name
-    }},
+    },
+    getName(){
+      const name = this.$store.getters.graphName(this.$store.state.index['devOps'])
+      this.data.labels= name
+      }},
 }
 </script>
