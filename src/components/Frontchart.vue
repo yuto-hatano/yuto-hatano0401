@@ -55,12 +55,12 @@ export default {
   },
   methods: {
     getScores(){
-    const score = this.$store.getters.frontGraphScore
+    const score = this.$store.getters.graphScore(0)
     this.data.datasets[0].data = score
     },
 
     getName(){
-    const name = this.$store.getters.frontGraphName
+    const name = this.$store.getters.graphName(0)
     this.data.labels= name
     }
   }

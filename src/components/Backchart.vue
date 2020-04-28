@@ -54,11 +54,11 @@ export default {
   },
   methods: {
     getSkills(){
-    const score = this.$store.getters.backGraphScore
+    const score = this.$store.getters.graphScore(1)
     this.data.datasets[0].data = score
     },
     getName(){
-    const name = this.$store.getters.backGraphName
+    const name = this.$store.getters.graphName(1)
     this.data.labels= name
     }
   }
