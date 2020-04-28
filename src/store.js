@@ -7,55 +7,27 @@ Vue.use(Vuex);
 const store = new Vuex.Store({ 
     state:{
         graphScore: [],
-        loaded:false
+        loaded:false,
+        index:{'frontEnd':0,'backEnd':1,'devOps':2}
     },
     getters:{
-        frontGraphScore(state) {
+        graphScore:(state) => (index) => {
             const scoreAllay = []
-            state.graphScore[0].skills.forEach((skillInfo)=>{
+            state.graphScore[index].skills.forEach((skillInfo)=>{
             scoreAllay.push(skillInfo.score)
             })
             return scoreAllay
         },
 
-        frontGraphName(state) {
+        graphName:(state) => (index) => {
             const scoreAllay = []
-            state.graphScore[0].skills.forEach((skillInfo)=>{
+            state.graphScore[index].skills.forEach((skillInfo)=>{
             scoreAllay.push(skillInfo.name)
             })
             return scoreAllay
         },
 
-        backGraphScore(state) {
-            const scoreAllay = []
-            state.graphScore[1].skills.forEach((skillInfo)=>{
-            scoreAllay.push(skillInfo.score)
-            })
-            return scoreAllay},
         
-        backGraphName(state) {
-            const scoreAllay = []
-            state.graphScore[1].skills.forEach((skillInfo)=>{
-            scoreAllay.push(skillInfo.name)
-            })
-            return scoreAllay
-            },
-
-        devOpsGraphScore(state) {
-            const scoreAllay = []
-            state.graphScore[2].skills.forEach((skillInfo)=>{
-            scoreAllay.push(skillInfo.score)
-            })
-            return scoreAllay
-        },
-
-        devOpsGraphName(state) {
-            const scoreAllay = []
-            state.graphScore[2].skills.forEach((skillInfo)=>{
-                scoreAllay.push(skillInfo.name)
-            })
-            return scoreAllay
-        }
     },
     mutations:{
         setGraphScore(state,paylord){

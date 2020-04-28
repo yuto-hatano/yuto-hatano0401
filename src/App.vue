@@ -33,8 +33,8 @@ export default {
 }
 </script>
 
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+<style scoped>
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 #App {
   font-family: 'Noto Sans JP', sans-serif;
