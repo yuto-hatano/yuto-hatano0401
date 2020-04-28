@@ -7,7 +7,8 @@ Vue.use(Vuex);
 const store = new Vuex.Store({ 
     state:{
         graphScore: [],
-        loaded:false
+        loaded:false,
+        index:{'frontEnd':0,'backEnd':1,'devOps':2}
     },
     getters:{
         graphScore:(state) => (index) => {
