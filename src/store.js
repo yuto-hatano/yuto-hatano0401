@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     state:{
         graphScore: [],
         loaded:false,
-        index:{'frontEnd':0,'backEnd':1,'devOps':2}
+        index:{'frontEnd':0,'backEnd':2,'devOps':1}
     },
     getters:{
         graphScore:(state) => (index) => {
